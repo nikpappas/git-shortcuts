@@ -9,7 +9,7 @@ Copy the below lines into you .bash_profile or just run `source .bash_profile` t
 ## Usage:
 git status -> `gits`
 git checkout -> `gitc`
-
+git log (nicely printed) -> `gitg`
 
 Get a list of branches along with their index number:
 `gitbl`
