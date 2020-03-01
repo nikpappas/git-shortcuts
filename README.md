@@ -13,6 +13,10 @@ git checkout -> `gitc`
 
 git log (nicely printed) -> `gitg`
 
+git diff -> `gitd`
+
+git branch -> `gitb`
+
 Get a list of branches along with their index number:
 `gitbl`
 
