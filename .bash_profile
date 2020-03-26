@@ -47,7 +47,7 @@ alias gitpfwl='gitp --force-with-lease'
 # Example in conjunction with other git commands:
 # gitd `gitn 3` would give the diff between the current local HEAD and the third branch as per `gitbl`
 function gitbn {
-  gitb | sed -n $1p | sed -e 's/origin\///g' | sed -e 's/[*| ]//g'
+  gitb $2 | sed -n $1p | sed -e 's/origin\///g' | sed -e 's/[*| ]//g'
 }
 
 # Delete branch by index (see `gitbl` and `gitcb`)
