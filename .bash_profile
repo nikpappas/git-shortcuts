@@ -18,7 +18,7 @@ alias gitbr='gitb -r'
 alias gitbl='gitb | cat -n'
 # Get a list of branches that exist remotely zipped with indeces. (For use with other commands like `gitcbr`)
 # Usage: gitblr
-alias gitblr='gitbl -r'
+alias gitblr='gitbr | cat -n'
 # Checkout a branch
 # Usage: gitc <BRANCH_NAME>
 alias gitc='git checkout'
@@ -65,4 +65,8 @@ function gitbd {
 # Usage: gitcb <BRANCH_NUMBER> [-r]
 function gitcb {
   gitc `gitbn $1`
+}
+
+function gitcbr {
+  gitc `gitbn $1 -r`
 }
