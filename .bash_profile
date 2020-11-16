@@ -30,17 +30,22 @@ alias gitd='git diff'
 alias gitf='git fetch'
 # Fetches changes form the remote repo deleting branches that had a remote equivalent that no longer exists remotely.
 alias gitfp='gitf --prune'
-alias gitg='git log --all --decorate --oneline --graph'
+alias git-graph='git log --decorate --oneline --graph'
+alias gitg='git-graph --all'
 alias gitg-date='gitg --pretty=format:"%C(yellow)%h% %C(red)%x09%ad%x09%C(white)%s"'
 # Git reset
 alias gitrs='git reset'
-alias gitrsh='gitr --hard'
+alias gitrsh='gitrs --hard'
 # Git rebase
 alias gitrb='git rebase'
 alias gitrbc='gitrb --continue'
 # Git push
 alias gitp='git push'
 alias gitpfwl='gitp --force-with-lease'
+# Git commit
+alias gitcm='git commit'
+alias gitcmam='gitcm --amend'
+alias gitcmamn='gitcmam --no-edit'
 
 # Get branch name as string by index (see `gitbl` and `gitcb`)
 # Usage: gitbn <BRANCH_NUMBER>
@@ -69,4 +74,9 @@ function gitcb {
 
 function gitcbr {
   gitc `gitbn $1 -r`
+}
+
+
+function gitg-branch {
+  git-graph "master..$1"
 }
