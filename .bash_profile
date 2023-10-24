@@ -46,6 +46,9 @@ alias gitpfwl='gitp --force-with-lease'
 alias gitcm='git commit'
 alias gitcmam='gitcm --amend'
 alias gitcmamn='gitcmam --no-edit'
+# Git clean (clean all non tracked/ignored files)
+alias git-clean='git clean -dfX'
+
 
 # Get branch name as string by index (see `gitbl` and `gitcb`)
 # Usage: gitbn <BRANCH_NUMBER>
